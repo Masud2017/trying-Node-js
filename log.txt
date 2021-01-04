@@ -1,0 +1,12 @@
+[0mGET /dbTest [36m302[0m 218.156 ms - 56[0m
+Executing (default): DROP TABLE IF EXISTS `notes`;
+Executing (default): SELECT 1+1 AS result
+[0mGET /users [36m304[0m 1.557 ms - -[0m
+Executing (default): DROP TABLE IF EXISTS `notes`;
+Connection has been established successfully.
+Executing (default): CREATE TABLE IF NOT EXISTS `notes` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `note` TEXT, `tag` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): PRAGMA INDEX_LIST(`notes`)
+Database & tables created
+Executing (default): INSERT INTO `notes` (`id`,`note`,`tag`,`createdAt`,`updatedAt`) VALUES (NULL,'pick up some bread after work','shopping','2021-01-04 00:53:34.280 +00:00','2021-01-04 00:53:34.280 +00:00'),(NULL,'remember to write up meeting notes','work','2021-01-04 00:53:34.280 +00:00','2021-01-04 00:53:34.280 +00:00'),(NULL,'learn how to use node orm','work','2021-01-04 00:53:34.280 +00:00','2021-01-04 00:53:34.280 +00:00');
+Executing (default): SELECT `id`, `note`, `tag`, `createdAt`, `updatedAt` FROM `notes` AS `note`;
+note
